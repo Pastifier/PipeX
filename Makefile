@@ -15,9 +15,13 @@ INCLUDE := includes/*
 INCLUDES := $(addprefix -I, $(INC_DIRS))
 
 # Source Files
-SRC_DIR := srcs/
-SRC := main.c
-SRCS := $(addprefix $(SRC_DIR), $(SRC))
+SRC_DIR := srcs
+WRP_DIR := $(SRC_DIR)/wrappers/
+PPX_DIR := $(SRC_DIR)/PipeX/
+WRP := w_utils.c w_access.c
+PPX := main.c
+SRCS := $(addprefix $(PPX_DIR), $(PPX)) \
+		$(addprefix $(WRP_DIR), $(WRP))
 
 # Misc.
 RED := '\033[0;31m'
