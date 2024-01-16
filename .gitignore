@@ -1,0 +1,12 @@
+# Executables
+pipex
+*.out
+
+# Debugging Files
+*.dsYM
+
+# Mac
+.DS_Store
+
+# Object Files
+*.o
