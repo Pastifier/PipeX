@@ -6,7 +6,7 @@
 /*   By: ebinjama <ebinjama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:11:10 by ebinjama          #+#    #+#             */
-/*   Updated: 2024/01/16 17:59:59 by ebinjama         ###   ########.fr       */
+/*   Updated: 2024/01/16 18:51:53 by ebinjama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	wopen(const char *path, int oflag)
 
 	fetch = open(path, oflag);
 	if (fetch == -1)
-		return (wperror(path), exit(EXIT_FAILURE), -1);
+		return (wperror(path), -1);
 	return (fetch);
 }
 
