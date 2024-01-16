@@ -41,3 +41,5 @@ clean:
 fclean:
 	@make -C $(LFT_DIR) fclean
 	@rm -rf $(NAME)
+
+re: fclean all
