@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pipex.h                                            :+:      :+:    :+:   */
+/*   log.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ebinjama <ebinjama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 16:50:51 by ebinjama          #+#    #+#             */
-/*   Updated: 2024/01/18 18:49:34 by ebinjama         ###   ########.fr       */
+/*   Created: 2024/01/18 15:41:51 by ebinjama          #+#    #+#             */
+/*   Updated: 2024/01/18 17:44:00 by ebinjama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PIPEX_H
-# define PIPEX_H
+#ifndef LOG_H
+# define LOG_H
 
-# include "wrappers.h"
-# include <sys/wait.h>
+# ifndef BAD_FORMAT
+#  define BAD_FORMAT "Format:\n\t./pipex file1 cmd1 cmd2 file2"
+# endif // !BAD_FORMAT
 
-/*---STRUCTS---*/
-typedef struct s_paths
-{
-	char	**arr;
-	char	*first;
-	size_t	increment;
-}	t_paths;
+# ifndef PATH_NOT_FOUND
+#  define PATH_NOT_FOUND "Couldn't find PATH"
+# endif // !PATH_NOT_FOUND
 
-/*---PATH FUNCS---*/
-
-char	*get_path(char *envp[]);
-t_paths	init_paths(char *envp[], size_t inc);
-
-#endif // !PIPEX_H
+#endif // !LOG_H

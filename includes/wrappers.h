@@ -6,7 +6,7 @@
 /*   By: ebinjama <ebinjama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:12:00 by ebinjama          #+#    #+#             */
-/*   Updated: 2024/01/16 18:06:35 by ebinjama         ###   ########.fr       */
+/*   Updated: 2024/01/18 15:40:23 by ebinjama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,8 @@ int		waccess(const char *path, int mode);
 
 // see close(2)
 int		wclose(int fd);
+
+// see exit(3)
+void	wexit(const char *message);
 
 #endif // !WRAPPERS_H
