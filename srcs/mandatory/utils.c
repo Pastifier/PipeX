@@ -6,7 +6,7 @@
 /*   By: ebinjama <ebinjama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 17:32:54 by ebinjama          #+#    #+#             */
-/*   Updated: 2024/01/18 18:50:11 by ebinjama         ###   ########.fr       */
+/*   Updated: 2024/01/19 16:52:25 by ebinjama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,22 @@ t_paths	init_paths(char *envp[], size_t inc)
 	self.first = *(self.arr);
 	*(self.arr) += inc;
 	return (self);
+}
+
+void	free_paths(t_paths *paths)
+{
+	char	*dummy;
+	char	**iter;
+
+	if (!paths || !paths->arr)
+		return ;
+	*(paths->arr) -= paths->increment;
+	iter = paths->arr;
+	while (*iter)
+	{
+		dummy = *iter;
+		++iter;
+		free(dummy);
+	}
+	free(paths->arr);
 }

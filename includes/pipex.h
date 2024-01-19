@@ -6,7 +6,7 @@
 /*   By: ebinjama <ebinjama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 16:50:51 by ebinjama          #+#    #+#             */
-/*   Updated: 2024/01/18 18:49:34 by ebinjama         ###   ########.fr       */
+/*   Updated: 2024/01/19 16:48:17 by ebinjama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ typedef struct s_paths
 
 char	*get_path(char *envp[]);
 t_paths	init_paths(char *envp[], size_t inc);
+void	free_paths(t_paths *paths);
 
 #endif // !PIPEX_H
