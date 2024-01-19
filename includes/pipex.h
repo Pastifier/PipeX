@@ -6,7 +6,7 @@
 /*   By: ebinjama <ebinjama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 16:50:51 by ebinjama          #+#    #+#             */
-/*   Updated: 2024/01/19 16:48:17 by ebinjama         ###   ########.fr       */
+/*   Updated: 2024/01/19 16:57:14 by ebinjama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 typedef struct s_paths
 {
 	char	**arr;
-	char	*first;
 	size_t	increment;
 }	t_paths;
 
