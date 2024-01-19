@@ -7,7 +7,7 @@ LIBFT := ft
 
 # Necessities
 CC := cc
-CFLAGS := -Wall -Wextra -Werror -g3 -L$(LFT_DIR) -l$(LIBFT)
+CFLAGS := -Wall -Wextra -Werror -g3 -L$(LFT_DIR) -l$(LIBFT) -fsanitize=address,undefined
 
 # Includes
 INC_DIRS := includes
