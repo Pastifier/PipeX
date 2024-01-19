@@ -6,7 +6,7 @@
 /*   By: ebinjama <ebinjama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:12:00 by ebinjama          #+#    #+#             */
-/*   Updated: 2024/01/18 15:40:23 by ebinjama         ###   ########.fr       */
+/*   Updated: 2024/01/19 15:00:15 by ebinjama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 # include "../libft/includes/libft.h"
 # include <stdio.h>
 # include <fcntl.h>
+# include <string.h>
+# include <sys/syscall.h>
+# include <errno.h>
 
 /*---COLOURS---*/
 # ifndef RED
@@ -45,5 +48,8 @@ int		wclose(int fd);
 
 // see exit(3)
 void	wexit(const char *message);
+
+// see strerror(3)
+void	wstrerror(const char *cause, int errnum);
 
 #endif // !WRAPPERS_H
